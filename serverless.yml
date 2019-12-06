@@ -105,6 +105,21 @@ functions:
           method: post
           cors: true
           authorizer: aws_iam
+  # getAllTodos:
+  #   handler: handler.getAllTodos
+  #   events:
+  #     - http:
+  #       path: todo
+  #       method: get
+  #       cors: true
+  create-user:
+    handler: create-user.main
+    events:
+      - http:
+          path: create-user
+          method: post
+          cors: true
+          authorizer: aws_iam
 
 # Create our resources with separate CloudFormation templates
 resources:
